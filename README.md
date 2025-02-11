@@ -1,6 +1,6 @@
 ## 🎈 Counter
 
-An example [PartyKit](https://partykit.io) server that counts a numbers.
+An example [PartyKit](https://partykit.io) server that counts a number.
 
 It keeps track of a single number, and pushes out the value whenever the number changes.
 
