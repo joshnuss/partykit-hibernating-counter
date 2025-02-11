@@ -10,7 +10,9 @@ export default class CounterServer implements Server {
   // state is a number
   value = 0
 
+  // when the server wakes from hibernation
   async onStart() {
+    // restore the value from storage or default to zero
     this.value = (await this.room.storage.get<number>('value')) || 0
   }
 
@@ -47,6 +49,8 @@ export default class CounterServer implements Server {
         this.value = +message
     }
 
+    // persist the value to storage
+    // so it can be restored after hibernation
     await this.room.storage.put('value', this.value)
 
     // the number has changed
