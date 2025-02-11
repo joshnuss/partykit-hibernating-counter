@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "partykit dev --live",
-    "deploy": "partykit deploy"
+    "deploy": "partykit deploy",
+    "ws": "wscat -c ws://localhost:1999/party/main"
   },
   "dependencies": {
     "partysocket": "^1.0.2"
   },
   "devDependencies": {
     "partykit": "^0.0.110",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "wscat": "^6.0.1"
   }
 }
