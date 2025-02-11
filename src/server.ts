@@ -10,6 +10,10 @@ export default class CounterServer implements Server {
   // state is a number
   value = 0
 
+  async onStart() {
+    this.value = (await this.room.storage.get<number>('value')) || 0
+  }
+
   // when a new connection is made
   onConnect(conn: Connection) {
     // send the latest value
@@ -17,7 +21,7 @@ export default class CounterServer implements Server {
   }
 
   // when a new message is received
-  onMessage(message: string) {
+  async onMessage(message: string) {
     // handle the message
     switch (message) {
       // reset value to zero
@@ -42,6 +46,8 @@ export default class CounterServer implements Server {
         // so update the value
         this.value = +message
     }
+
+    await this.room.storage.put('value', this.value)
 
     // the number has changed
     // so update everyone
