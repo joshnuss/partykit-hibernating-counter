@@ -1,7 +1,11 @@
-import type { Server, Room, Connection } from "partykit/server"
+import type { Server, Room, Connection, ServerOptions } from "partykit/server"
 
 export default class CounterServer implements Server {
   constructor(readonly room: Room) {}
+
+  options: ServerOptions = {
+    hibernate: true,
+  }
 
   // state is a number
   value = 0
