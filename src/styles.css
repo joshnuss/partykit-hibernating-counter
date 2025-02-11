@@ -35,4 +35,15 @@ button {
 #value {
   padding: var(--size-8);
   font-weight: bold;
+
+  &.highlight {
+    animation: 0.5s pop;
+    animation-timing-function: var(--ease-4);
+  }
+}
+
+@keyframes pop {
+  from { color: black }
+  50% { color: var(--indigo-8) }
+  to { color: black }
 }

@@ -28,6 +28,14 @@ decrement.addEventListener('click', () => {
 
 // handle new value from server
 conn.addEventListener("message", (event) => {
+  // remove highlighting
+  value.classList.remove('highlight')
+
   // update DOM
   value.innerText = event.data
+
+  // add highlighting
+  setTimeout(() => {
+    value.classList.add('highlight')
+  }, 10)
 })
