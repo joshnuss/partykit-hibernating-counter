@@ -43,7 +43,8 @@ button {
 }
 
 @keyframes pop {
-  from { color: black }
-  50% { color: var(--indigo-8) }
-  to { color: black }
+  from { color: var(--surface-1); scale: 1 }
+  20% { color: var(--indigo-8); scale: 1.3 }
+  80% { color: var(--indigo-8); scale: 1.3}
+  to { color: var(--surface-1); scale: 1 }
 }
