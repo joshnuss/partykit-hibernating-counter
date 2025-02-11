@@ -8,6 +8,7 @@
     "ws": "wscat -c ws://localhost:1999/party/main"
   },
   "dependencies": {
+    "open-props": "^1.7.12",
     "partysocket": "^1.0.2"
   },
   "devDependencies": {

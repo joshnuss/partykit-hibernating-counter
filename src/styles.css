@@ -1,31 +1,38 @@
-/* 
-  We've already included normalize.css. 
-
-  But we'd like a modern looking boilerplate. 
-  Clean type, sans-serif, and a nice color palette. 
-  
-*/
+@import 'https://unpkg.com/open-props';
+@import 'https://unpkg.com/open-props/normalize.min.css';
 
 body {
-  font-family: sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
+  display: grid;
+  place-items: center;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: sans-serif;
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+main {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items: center;
+  max-width: 500px;
 }
 
-#app {
-  padding: 1rem;
+button {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-round);
+  width: 80px;
+  transition: all 0.2s var(--ease-3);
+
+  &:hover {
+    background: var(--indigo-4);
+    scale: 1.4;
+  }
+}
+
+#value, button {
+  display: flex;
+  font-size: var(--font-size-8);
+  justify-content: center;
+  align-items: center;
+}
+
+#value {
+  padding: var(--size-8);
+  font-weight: bold;
 }
