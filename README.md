@@ -1,4 +1,4 @@
-## 🎈 Counter
+## 🎈 Hibernating Counter
 
 An example [PartyKit](https://partykit.io) server that counts a number *and* can hibernate.
 
